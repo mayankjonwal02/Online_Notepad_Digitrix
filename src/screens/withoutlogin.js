@@ -4,16 +4,17 @@ import Navbar from "../components/Navbar";
 import MyEditor from "../components/MyEditor";
 import { useParams } from "react-router-dom";
 
-export default function Home() {
+export default function WithoutLoginDoc() {
 
-  const {email , docname , doctype } = useParams()
+  const email = ""
+  const docname = ""
+  const doctype = "old"
   return (
     <div className="">
-      <Navbar docname={docname} />
-      {/* <MyEditor /> */}
-      {/* <div className="" style={{display:""}}> */}
+      <Navbar docname={"No Account Found"} />
+
         <Card email = {email}  docname = {docname} doctype = {doctype}/>
-      {/* </div> */}
+      
     </div>
   );
 }

@@ -1,0 +1,104 @@
+.addDocButton {
+    cursor: pointer;
+    transition: transform 0.3s;
+    
+}
+
+.addDocButton:hover {
+    transform: scale(1.5);
+}
+
+.addDocButton:active{
+    transform: scale(1);
+}
+
+@media (hover : none ) {
+    .addDocButton:hover {
+        transform: none;
+    }
+}
+
+
+.gridclass {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width : 1000px)
+{
+    .gridclass {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width : 800px)
+{
+    .gridclass {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width : 580px)
+{
+    .gridclass {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .centergridcontent {
+        display: flex;
+    }
+}
+
+
+.historyscreen {
+    display: flex;
+    flex-direction: row;
+    
+    /* width: 100vw; */
+}
+
+.version {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+@media(max-width : 800px)
+{
+    .historyscreen {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        
+    }
+
+    .version {
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        justify-content: center;
+        width:500px;
+        /* flex: 1; */
+        
+    }
+
+    .historyall {
+        max-width:100%;
+       
+    }
+}

@@ -1,0 +1,38 @@
+.cardconfig {
+    box-shadow: 0 4px 8px #78c7ff;
+}
+
+.cardconfig:hover
+{
+    box-shadow: 0 4px 8px #0095ff; 
+}
+
+.navconfig {
+    display:flex;
+    flex:1;
+    justify-content:center;
+    
+    padding-left: 200px;
+}
+
+@media(max-width : 1000px)
+{
+    .navconfig {
+        
+        flex:1;
+        justify-content: start;
+    }
+}
+
+.custom-quill-editor .ql-toolbar {
+    background-color: #c0c0c0;
+   
+    
+}
+
+
+.custom-quill-editor .ql-editor {
+    background-color: #ffffff;
+   
+    
+}
