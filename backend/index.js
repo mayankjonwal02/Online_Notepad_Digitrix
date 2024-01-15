@@ -1,4 +1,5 @@
 const express = require('express')
+const compression = require('compression')
 const cors = require('cors')
 const mysql = require("./mysql_connection")
 const mongo = require("./mongodb_connection")
@@ -8,6 +9,8 @@ const port = 5000
 
 
 app.use(cors())
+app.use(compression())
+
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.header(
