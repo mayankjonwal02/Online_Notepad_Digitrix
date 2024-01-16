@@ -11,7 +11,7 @@ const Defaultscreen = () => {
     if (localStorage.getItem("islogined") === "true") {
       navigate("/docs");
     } else {
-      navigate("/login");
+      navigate("/noaccountdoc")
 
     }
   }, []);
