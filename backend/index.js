@@ -34,5 +34,5 @@ app.use("/api",require("./routes/signup"));
 app.use("/api",require("./routes/updateddoc"))
 app.use("/api",require("./routes/getcontent"))
 
-mysql();
+// mysql();
 mongo();

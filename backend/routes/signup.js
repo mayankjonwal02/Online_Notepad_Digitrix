@@ -6,27 +6,34 @@ const mongo = require('mongoose')
 
 router.post("/signup",async(req,res) => {
 
-    const con = mysql.createPool({
-        host:"localhost",
-        password:"",
-        user:"root",
-        database:"digitrix_notepad"
-    })
+    // const con = mysql.createPool({
+    //     host:"localhost",
+    //     password:"",
+    //     user:"root",
+    //     database:"digitrix_notepad"
+    // })
 
     try {
-        await con.getConnection()
+        // await con.getConnection()
             
         try {
             let useremail = req.body.email
             let userpassword = req.body.password
-            
-            let [data] = await con.execute("SELECT * FROM users WHERE email = ?",[useremail])
-
-            if(data.length == 0)
+            let userdb = await mongo.connection.useDb("digitrix_notepad")
+            let data = await userdb.collection("digitrix_users").findOne({email:useremail})
+            // let [data] = await con.execute("SELECT * FROM users WHERE email = ?",[useremail])
+            // data.length == 0
+            if(!data)
             {
-                let [alldata] = await con.execute("SELECT * FROM users")
+                // let [alldata] = await con.execute("SELECT * FROM users")
+                let totalemails = await userdb.collection("digitrix_users").countDocuments();
                 try {
-                    await con.execute("INSERT INTO users (id , email , password) VALUES (? , ? , ?)",[alldata.length + 1 , useremail  , userpassword])
+                    // await con.execute("INSERT INTO users (id , email , password) VALUES (? , ? , ?)",[alldata.length + 1 , useremail  , userpassword])
+                    await userdb.collection("digitrix_users").insertOne({
+                        email:useremail,
+                        password:userpassword,
+                        id : totalemails
+                    })
                     let mydb = await mongo.connection.useDb("digitrix_notepad")
              
                     await mydb.collection("docdata").insertOne({

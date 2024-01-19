@@ -6,21 +6,25 @@ const mongo = require("mongoose")
 
 router.post("/login",async (req,res) => {
     try {
-        const con = mysql.createPool({
-            host:"localhost",
-            password:"",
-            user:"root",
-            database:"digitrix_notepad"
-        })
-        await con.getConnection();
+        // const con = mysql.createPool({
+        //     host:"localhost",
+        //     password:"",
+        //     user:"root",
+        //     database:"digitrix_notepad"
+        // })
+        // await con.getConnection();
+
+        var userdb = await mongo.connection.useDb("digitrix_notepad")
         
         try {
             
            let useremail = req.body.email;
            let userpassword = req.body.password; 
 
-           let [data] = await con.execute("SELECT * FROM users where email = ? AND password = ?",[useremail , userpassword])
-           if (data.length == 1) {
+        //    let [data] = await con.execute("SELECT * FROM users where email = ? AND password = ?",[useremail , userpassword])
+
+        let data = await userdb.collection("digitrix_users").findOne({email:useremail})
+           if (data.password == userpassword) {
             
                     
             res.json({success:true , message :"Login Successful"})
