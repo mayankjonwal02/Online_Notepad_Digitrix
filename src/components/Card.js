@@ -101,13 +101,13 @@ export default function Card(props) {
       }}
     >
       <div
-        className="bg-primary"
-        style={{ display: "flex", justifyContent: "flex-start" }}
+        className=""
+        style={{ display: "flex", justifyContent:"space-between" }}
       >
         {/* <button onClick={downloadTxtFile}>Download as TXT</button> */}
 
         <div
-          className="btn bg-white text-primary fw-bold m-3"
+          className="text-center pt-2 pb-2 ps-4 pe-4 text-primary fw-bold m-3"
           style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}
           onClick={() => {
             if (islogined) {
@@ -120,7 +120,7 @@ export default function Card(props) {
           Home
         </div>
         <div
-          className="btn bg-white text-primary fw-bold m-3"
+          className="text-center pt-2 pb-2 ps-4 pe-4 text-primary fw-bold m-3"
           style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}
           onClick={() => {
             if (islogined) {
@@ -194,7 +194,7 @@ export default function Card(props) {
                   "background",
                   "align",
                 ]}
-                style={{ height: "800px" }}
+                style={{ height: "800px" , fontSize: "16px"}}
               />
             </div>
           </div>

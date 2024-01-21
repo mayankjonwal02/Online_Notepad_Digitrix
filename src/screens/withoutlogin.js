@@ -11,7 +11,7 @@ export default function WithoutLoginDoc() {
   const doctype = "old"
   return (
     <div className="">
-      <Navbar docname={"No Account Found"} />
+      <Navbar docname={""} />
 
         <Card email = {email}  docname = {docname} doctype = {doctype}/>
       

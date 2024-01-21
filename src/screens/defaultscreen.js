@@ -8,12 +8,14 @@ const Defaultscreen = () => {
 
   useEffect(() => {
     
-    if (localStorage.getItem("islogined") === "true") {
-      navigate("/docs");
-    } else {
-      navigate("/noaccountdoc")
+    // if (localStorage.getItem("islogined") === "true") {
+    //   navigate("/docs");
+    // } else {
+    //   navigate("/noaccountdoc")
 
-    }
+    // }
+
+    navigate("/noaccountdoc")
   }, []);
 
 
