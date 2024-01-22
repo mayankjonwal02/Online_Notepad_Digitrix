@@ -100,37 +100,40 @@ export default function Card(props) {
         flexDirection: "column",
       }}
     >
-      <div
-        className=""
-        style={{ display: "flex", justifyContent:"space-between" }}
-      >
-        {/* <button onClick={downloadTxtFile}>Download as TXT</button> */}
 
-        <div
-          className="text-center pt-2 pb-2 ps-4 pe-4 text-primary fw-bold m-3"
-          style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}
-          onClick={() => {
-            if (islogined) {
-              navigate("/docs");
-            } else {
-              alert("Account not Logined");
-            }
-          }}
-        >
-          Home
-        </div>
-        <div
-          className="text-center pt-2 pb-2 ps-4 pe-4 text-primary fw-bold m-3"
-          style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}
-          onClick={() => {
-            if (islogined) {
-              navigate(`/history/${email}/${docname}/${"old"}`);
-            } else alert("Account not Logined");
-          }}
-        >
-          History
-        </div>
-      </div>
+{islogined ? (
+  <div className="" style={{ display: "flex", justifyContent: "space-between" }}>
+    {/* <button onClick={downloadTxtFile}>Download as TXT</button> */}
+    <div
+      className="text-center pt-2 pb-2 ps-4 pe-4 text-primary fw-bold m-3"
+      style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}
+      onClick={() => {
+        if (islogined) {
+          navigate("/docs");
+        } else {
+          alert("Account not logged in");
+        }
+      }}
+    >
+      Home
+    </div>
+    <div
+      className="text-center pt-2 pb-2 ps-4 pe-4 text-primary fw-bold m-3"
+      style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}
+      onClick={() => {
+        if (islogined) {
+          navigate(`/history/${email}/${docname}/${"old"}`);
+        } else {
+          alert("Account not logged in");
+        }
+      }}
+    >
+      History
+    </div>
+  </div>
+) : null}
+
+      
       <div className="text-center text-primary fw-bold fs-3 pt-4" style={{}}>
         Free Online Notepad Text Editor
       </div>
