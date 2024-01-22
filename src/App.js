@@ -16,7 +16,7 @@ function App() {
     <Router>
       <div>
         <Routes>
-        <Route exact path="/" element={<Defaultscreen/>} />
+        <Route exact path="/" element={<WithoutLoginDoc/>} />
           <Route exact path="/document/:email/:docname/:doctype" element={<Home />} />
           <Route exact path="/login" element={<Login/>}/>
           <Route exact path="/signup" element={<Signup/>}/>
