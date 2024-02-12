@@ -14,7 +14,7 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-
+import mylogo from "./Logo2.png"
 export default function Card(props) {
   const [text, setText] = useState("");
   const editorRef = useRef();
@@ -47,12 +47,10 @@ export default function Card(props) {
 
     if (islogined) {
       fetchcontent();
-    }
-    else {
-      var oldcontent = localStorage.getItem("content")
-      if(oldcontent)
-      {
-        setText(oldcontent)
+    } else {
+      var oldcontent = localStorage.getItem("content");
+      if (oldcontent) {
+        setText(oldcontent);
       }
     }
   }, []);
@@ -100,51 +98,52 @@ export default function Card(props) {
         flexDirection: "column",
       }}
     >
+      {islogined ? (
+        <div
+          className=""
+          style={{ display: "flex", justifyContent: "space-between" }}
+        >
+          {/* <button onClick={downloadTxtFile}>Download as TXT</button> */}
+          <div
+            className="text-center pt-2 pb-2 ps-4 pe-4 text-primary fw-bold m-3"
+            style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}
+            onClick={() => {
+              if (islogined) {
+                navigate("/docs");
+              } else {
+                alert("Account not logged in");
+              }
+            }}
+          >
+            Home
+          </div>
+          <div
+            className="text-center pt-2 pb-2 ps-4 pe-4 text-primary fw-bold m-3"
+            style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}
+            onClick={() => {
+              if (islogined) {
+                navigate(`/history/${email}/${docname}/${"old"}`);
+              } else {
+                alert("Account not logged in");
+              }
+            }}
+          >
+            History
+          </div>
+        </div>
+      ) : null}
 
-{islogined ? (
-  <div className="" style={{ display: "flex", justifyContent: "space-between" }}>
-    {/* <button onClick={downloadTxtFile}>Download as TXT</button> */}
-    <div
-      className="text-center pt-2 pb-2 ps-4 pe-4 text-primary fw-bold m-3"
-      style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}
-      onClick={() => {
-        if (islogined) {
-          navigate("/docs");
-        } else {
-          alert("Account not logged in");
-        }
-      }}
-    >
-      Home
-    </div>
-    <div
-      className="text-center pt-2 pb-2 ps-4 pe-4 text-primary fw-bold m-3"
-      style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}
-      onClick={() => {
-        if (islogined) {
-          navigate(`/history/${email}/${docname}/${"old"}`);
-        } else {
-          alert("Account not logged in");
-        }
-      }}
-    >
-      History
-    </div>
-  </div>
-) : null}
-
-      
       <div className="text-center text-primary fw-bold fs-3 pt-4" style={{}}>
         Free Online Notepad Text Editor
       </div>
-    
+
       <div
         className=" container-fluid mt-3 "
         style={{ height: "100%", backgroundColor: "#e4e4e4" }}
       >
         <div id="post" className="" style={{ backgroundColor: "#e4e4e4" }}>
           <div
-            className="m-5 "
+            className="m-2 "
             style={{
               height: "100%",
               display: "flex",
@@ -165,7 +164,7 @@ export default function Card(props) {
                     handleEditorChange(content, editor);
                   } else {
                     setText(content);
-                    localStorage.setItem("content",content)
+                    localStorage.setItem("content", content);
                   }
                 }}
                 modules={{
@@ -197,7 +196,7 @@ export default function Card(props) {
                   "background",
                   "align",
                 ]}
-                style={{ height: "800px" , fontSize: "16px"}}
+                style={{ height: "800px", fontSize: "16px" }}
               />
             </div>
           </div>
@@ -212,7 +211,7 @@ export default function Card(props) {
         }}
       >
         <div
-          className="btn bg-white text-primary fw-bold m-3"
+          className="btn bg-white text-primary fw-bold m-5"
           style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}
           onClick={downloadTxtFile}
         >
@@ -912,7 +911,13 @@ export default function Card(props) {
             justifyContent: "center",
           }}
         >
-          <div className="text-primary fw-bold" style={{ fontSize: "70px" }}>
+          
+            <img
+              src={mylogo}
+              style={{ height: "110px" }}
+            />
+          
+          {/* <div className="text-primary fw-bold" style={{ fontSize: "70px" }}>
             D
           </div>
           <div
@@ -920,17 +925,12 @@ export default function Card(props) {
             style={{ fontSize: "30px" }}
           >
             igitrix
-          </div>
+          </div> */}
         </div>
         <div
           className="text-black  text-center"
           style={{ maxWidth: "600px" }}
-        >
-          Erase.bg is a smart AI background removal and image editor tool that
-          lets you edit single or bulk images with precision. It enables users
-          to edit their background for profile pictures, resize images by
-          different aspect ratios and save images in all formats.
-        </div>
+        ></div>
         <div
           className="mt-4"
           style={{
@@ -941,42 +941,54 @@ export default function Card(props) {
             justifyContent: "space-evenly",
           }}
         >
-          <Link to="https://onlinenotepadeditor.com/page/contact-us/">Contact Us</Link>
-          <Link to="https://onlinenotepadeditor.com/page/about-us/">About Us</Link>
-          <Link to="https://onlinenotepadeditor.com/page/privacy-policy/">Privacy policy</Link>
-          <Link to="https://onlinenotepadeditor.com/page/terms-of-service/">Terms</Link>
-          <Link to="https://onlinenotepadeditor.com/page/dmca/">DMCA policy</Link>
-          <Link to="https://onlinenotepadeditor.com/page/authors/">Authors</Link>
-          <Link to="https://onlinenotepadeditor.com/page/work-with-us/">Work With Us</Link>
+          <Link to="https://onlinenotepadeditor.com/page/contact-us/">
+            Contact Us
+          </Link>
+          <Link to="https://onlinenotepadeditor.com/page/about-us/">
+            About Us
+          </Link>
+          <Link to="https://onlinenotepadeditor.com/page/privacy-policy/">
+            Privacy policy
+          </Link>
+          <Link to="https://onlinenotepadeditor.com/page/terms-of-service/">
+            Terms
+          </Link>
+          <Link to="https://onlinenotepadeditor.com/page/dmca/">
+            DMCA policy
+          </Link>
+          <Link to="https://onlinenotepadeditor.com/page/authors/">
+            Authors
+          </Link>
+          <Link to="https://onlinenotepadeditor.com/page/work-with-us/">
+            Work With Us
+          </Link>
           <Link to="https://onlinenotepadeditor.com/page/blog/">Blogs</Link>
           <Link to="https://onlinenotepadeditor.com/page/help/">Help</Link>
-          <Link to="https://onlinenotepadeditor.com/page/frequently-asked-questions/">FAQs</Link>
+          <Link to="https://onlinenotepadeditor.com/page/frequently-asked-questions/">
+            FAQs
+          </Link>
         </div>
         <div className="text-black fw-bold mt-5">Find Us On</div>
         <div
-          className="mt-3"
+          className="mt-3 mb-5"
           style={{
             display: "flex",
             justifyContent: "space-between",
             width: "200px",
           }}
         >
-          <Link to="/linkedin"   style={{color:"black"}}>
+          <Link to="/linkedin" style={{ color: "black" }}>
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </Link>
-          <Link to="/facebook"  style={{color:"black"}}>
+          <Link to="/facebook" style={{ color: "black" }}>
             <FontAwesomeIcon icon={faFacebook} size="2x" />
           </Link>
-          <Link to="/instagram"  style={{color:"black"}}>
+          <Link to="/instagram" style={{ color: "black" }}>
             <FontAwesomeIcon icon={faInstagram} size="2x" />
           </Link>
-          <Link to="/twitter"  style={{color:"black"}}>
+          <Link to="/twitter" style={{ color: "black" }}>
             <FontAwesomeIcon icon={faTwitter} size="2x" />
           </Link>
-        </div>
-
-        <div className="text-black m-4">
-        #MadeInIndia | ©2024 Shopsense Retail Technologies Limited
         </div>
       </div>
     </div>

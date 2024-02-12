@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./componentcss.css";
-
+import mylogo from "./Logo2.png"
 export default function Navbar(props) {
   let islogined = localStorage.getItem("islogined");
   const navigate = useNavigate();
@@ -17,12 +17,17 @@ export default function Navbar(props) {
           className=""
           style={{
             fontWeight: "bolder",
-            fontSize: "30px",
+            fontSize: "10px",
             color: "#ffffff",
             flex: "1",
           }}
         >
-          Digitrix
+         
+         <img
+         className="ms-2"
+              src={mylogo}
+              style={{ width: "150px" }}
+            />
         </div>
 
         {props.docname ? (
@@ -60,7 +65,7 @@ export default function Navbar(props) {
               flex: "1",
             }}
           >
-            <div
+            {/* <div
               className="btn bg-white text-primary fw-bold fs-5"
               onClick={onlogout}
             >
@@ -71,7 +76,7 @@ export default function Navbar(props) {
               onClick={() => {navigate("/noaccountdoc")}}
             >
               Go to Docs
-            </div>
+            </div> */}
           </div>
           {/* <ul className="navbar-nav">
             <li className="nav-item">
