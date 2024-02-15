@@ -2,37 +2,62 @@
     box-shadow: 0 4px 8px #78c7ff;
 }
 
-.cardconfig:hover
-{
-    box-shadow: 0 4px 8px #0095ff; 
+.cardconfig:hover {
+    box-shadow: 0 4px 8px #0095ff;
 }
 
 .navconfig {
-    display:flex;
-    flex:1;
-    justify-content:center;
-    
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
     padding-left: 200px;
 }
 
-@media(max-width : 1000px)
-{
+@media(max-width : 1000px) {
     .navconfig {
-        
-        flex:1;
+
+        flex: 1;
         justify-content: start;
     }
 }
 
 .custom-quill-editor .ql-toolbar {
     background-color: #c0c0c0;
-   
-    
+
+
 }
 
 
 .custom-quill-editor .ql-editor {
     background-color: #ffffff;
-   
+
+
+}
+
+.footerelements {
+    width: 100%;
+
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-evenly
+}
+
+
+@media(max-width : 500px)
+{
+    .footerelements {
+        width: 100%;
+    
+        display: grid;
+        flex: 1;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        gap: 20px;
+        
+    }
     
 }

@@ -196,7 +196,7 @@ export default function Card(props) {
                   "background",
                   "align",
                 ]}
-                style={{ height: "800px", fontSize: "16px" }}
+                style={{ height: "100vh", fontSize: "16px" }}
               />
             </div>
           </div>
@@ -212,7 +212,7 @@ export default function Card(props) {
       >
         <div
           className="btn bg-white text-primary fw-bold m-5"
-          style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)" }}
+          style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",zIndex:3,marginBlockStart:"40px" }}
           onClick={downloadTxtFile}
         >
           Download as TXT
@@ -932,13 +932,9 @@ export default function Card(props) {
           style={{ maxWidth: "600px" }}
         ></div>
         <div
-          className="mt-4"
+          className="mt-4 footerelements"
           style={{
-            width: "100%",
-            display: "flex",
-            flex: "1",
-            flexDirection: "row",
-            justifyContent: "space-evenly",
+            
           }}
         >
           <Link to="https://onlinenotepadeditor.com/page/contact-us/">
