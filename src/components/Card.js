@@ -152,7 +152,7 @@ export default function Card(props) {
           >
             <div
               className=""
-              style={{ display: "flex", flexDirection: "column" }}
+              style={{ display: "flex", flexDirection: "column" ,alignItems:"center",width:"100%"}}
             >
               {/* Use TinyMCE Editor component with onEditorChange event */}
               <ReactQuill
@@ -196,7 +196,7 @@ export default function Card(props) {
                   "background",
                   "align",
                 ]}
-                style={{ height: "100vh", fontSize: "16px" }}
+                style={{ height: "800px", fontSize: "16px",maxWidth:"1000px",minWidth:"800px" }}
               />
             </div>
           </div>
@@ -208,11 +208,12 @@ export default function Card(props) {
           display: "flex",
           justifyContent: "center",
           backgroundColor: "#e4e4e4",
+          marginBlockStart:"50px"
         }}
       >
         <div
           className="btn bg-white text-primary fw-bold m-5"
-          style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",zIndex:3,marginBlockStart:"40px" }}
+          style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",zIndex:3,marginBlockStart:"40px" ,}}
           onClick={downloadTxtFile}
         >
           Download as TXT
