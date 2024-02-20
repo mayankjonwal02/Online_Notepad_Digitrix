@@ -196,7 +196,7 @@ export default function Card(props) {
                   "background",
                   "align",
                 ]}
-                style={{ height: "800px", fontSize: "16px",maxWidth:"1000px",minWidth:"800px" }}
+                style={{ height: "800px", fontSize: "16px",width:"100%" }}
               />
             </div>
           </div>
