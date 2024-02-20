@@ -150,11 +150,11 @@ export default function Card(props) {
               flexDirection: "column",
             }}
           >
-            <div
+            {/* <div
               className=""
-              style={{ display: "flex", flexDirection: "column" ,alignItems:"center",width:"100%"}}
-            >
-              {/* Use TinyMCE Editor component with onEditorChange event */}
+              style={{ display: "flex", flexDirection: "column" , alignItems:"center",width:"100%"}}
+            > */}
+             
               <ReactQuill
                 theme="snow"
                 className="custom-quill-editor "
@@ -198,7 +198,7 @@ export default function Card(props) {
                 ]}
                 style={{ height: "800px", fontSize: "16px",width:"100%" }}
               />
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
