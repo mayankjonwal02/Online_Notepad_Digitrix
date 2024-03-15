@@ -13,7 +13,10 @@ export default function WithoutLoginDoc() {
     <div className="">
       <Navbar docname={""} />
 
+<div className="" style={{ backgroundColor: "#e4e4e4"}}>
+  
         <Card email = {email}  docname = {docname} doctype = {doctype}/>
+</div>
       
     </div>
   );

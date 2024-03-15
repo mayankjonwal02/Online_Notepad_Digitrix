@@ -90,7 +90,7 @@ export default function Card(props) {
 
   return (
     <div
-      className=""
+      className="container"
       style={{
         height: "100%",
         backgroundColor: "#e4e4e4",
@@ -941,15 +941,15 @@ export default function Card(props) {
             justifyContent: "space-evenly",
           }}
         >
-          <Link to="https://onlinenotepadeditor.com/page/contact-us/">
+          {/* <Link to="https://onlinenotepadeditor.com/page/contact-us/">
             Contact Us
-          </Link>
-          <Link to="https://onlinenotepadeditor.com/page/about-us/">
+          </Link> */}
+          {/* <Link to="https://onlinenotepadeditor.com/page/about-us/">
             About Us
-          </Link>
-          <Link to="https://onlinenotepadeditor.com/page/privacy-policy/">
+          </Link> */}
+          {/* <Link to="https://onlinenotepadeditor.com/page/privacy-policy/">
             Privacy policy
-          </Link>
+          </Link> */}
           <Link to="https://onlinenotepadeditor.com/page/terms-of-service/">
             Terms
           </Link>
@@ -962,7 +962,7 @@ export default function Card(props) {
           <Link to="https://onlinenotepadeditor.com/page/work-with-us/">
             Work With Us
           </Link>
-          <Link to="https://onlinenotepadeditor.com/page/blog/">Blogs</Link>
+          {/* <Link to="https://onlinenotepadeditor.com/page/blog/">Blogs</Link> */}
           <Link to="https://onlinenotepadeditor.com/page/help/">Help</Link>
           <Link to="https://onlinenotepadeditor.com/page/frequently-asked-questions/">
             FAQs

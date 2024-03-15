@@ -13,6 +13,8 @@ import { GoogleLogin } from "@react-oauth/google";
 
 function App() {
   return (
+    <div className="" style={{backgroundColor: "#e4e4e4"}}>
+
     <Router>
       <div>
         <Routes>
@@ -26,6 +28,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </div>
 
 
   );

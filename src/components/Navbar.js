@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./componentcss.css";
 import mylogo from "./Logo2.png"
+import { Link } from "react-router-dom";
 export default function Navbar(props) {
   let islogined = localStorage.getItem("islogined");
   const navigate = useNavigate();
@@ -22,12 +23,12 @@ export default function Navbar(props) {
             flex: "1",
           }}
         >
-         
-         <img
-         className="ms-2"
-              src={mylogo}
-              style={{ width: "150px" }}
-            />
+
+          <img
+            className="ms-2"
+            src={mylogo}
+            style={{ width: "150px" }}
+          />
         </div>
 
         {props.docname ? (
@@ -65,6 +66,17 @@ export default function Navbar(props) {
               flex: "1",
             }}
           >
+
+            <Link className="text-black fw-bold m-3 fs-5" to="https://onlinenotepadeditor.com/page/blog/">Blogs</Link>
+            <Link className="text-black fw-bold m-3 fs-5" to="https://onlinenotepadeditor.com/page/privacy-policy/">
+              Privacy policy
+            </Link>
+            <Link className="text-black fw-bold m-3 fs-5" to="https://onlinenotepadeditor.com/page/about-us/">
+              About Us
+            </Link>
+            <Link  className="text-black fw-bold m-3 fs-5" to="https://onlinenotepadeditor.com/page/contact-us/">
+            Contact Us
+          </Link>
             {/* <div
               className="btn bg-white text-primary fw-bold fs-5"
               onClick={onlogout}
