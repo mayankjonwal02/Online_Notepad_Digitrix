@@ -903,20 +903,25 @@ export default function Card(props) {
           alignItems: "center",
         }}
       >
+      <hr style={{border:"2px solid black",width:"100%"}}/>
         <div
           style={{
             display: "flex",
             flexDirection: "row",
             alignItems: "flex-end",
             justifyContent: "center",
+            
           }}
         >
-          
-            <img
-              src={mylogo}
-              style={{ height: "110px" }}
-            />
-          
+
+          <img
+            src={mylogo}
+            style={{ height: "110px" }}
+          />
+          <div className="fs-5 fw-bold ms-3" style={{maxWidth:"700px"}}>
+            Introducing OnlineNotepadEditor.com, a user-friendly online notepad offering a classic notepad experience without downloading. Accessible on any device, our platform caters to individuals and professionals, providing a seamless and efficient way to jot down notes or draft documents. Simplify text editing with familiarity and convenience wherever you go.
+          </div>
+
           {/* <div className="text-primary fw-bold" style={{ fontSize: "70px" }}>
             D
           </div>
@@ -927,6 +932,7 @@ export default function Card(props) {
             igitrix
           </div> */}
         </div>
+        
         <div
           className="text-black  text-center"
           style={{ maxWidth: "600px" }}
@@ -938,7 +944,7 @@ export default function Card(props) {
             display: "flex",
             flex: "1",
             flexDirection: "row",
-            justifyContent:"space-around",
+            justifyContent: "space-around",
           }}
         >
           {/* <Link to="https://onlinenotepadeditor.com/page/contact-us/">
@@ -950,28 +956,28 @@ export default function Card(props) {
           {/* <Link to="https://onlinenotepadeditor.com/page/privacy-policy/">
             Privacy policy
           </Link> */}
-          <Link to="https://onlinenotepadeditor.com/page/dmca/" style={{border:"3px solid #0000FF",color:"#0000FF",textDecoration:"None",borderRadius:"25px",padding:"8px",fontWeight:"bolder"}}>
+          <Link to="https://onlinenotepadeditor.com/page/dmca/" style={{ border: "3px solid #0000FF", color: "#0000FF", textDecoration: "None", borderRadius: "25px", padding: "8px", fontWeight: "bolder" }}>
             DCMA
           </Link>
-          <Link to="https://onlinenotepadeditor.com/page/work-with-us/" style={{border:"3px solid #0000FF",color:"#0000FF",textDecoration:"None",borderRadius:"25px",padding:"8px",fontWeight:"bolder"}}>
-          Work With us
+          <Link to="https://onlinenotepadeditor.com/page/work-with-us/" style={{ border: "3px solid #0000FF", color: "#0000FF", textDecoration: "None", borderRadius: "25px", padding: "8px", fontWeight: "bolder" }}>
+            Work With us
           </Link>
-          <Link to="https://onlinenotepadeditor.com/page/advertise/" style={{border:"3px solid #0000FF",color:"#0000FF",textDecoration:"None",borderRadius:"25px",padding:"8px",fontWeight:"bolder"}}>
+          <Link to="https://onlinenotepadeditor.com/page/advertise/" style={{ border: "3px solid #0000FF", color: "#0000FF", textDecoration: "None", borderRadius: "25px", padding: "8px", fontWeight: "bolder" }}>
             Advertise
           </Link>
-          <Link to="https://onlinenotepadeditor.com/page/guest-post/" style={{border:"3px solid #0000FF",color:"#0000FF",textDecoration:"None",borderRadius:"25px",padding:"8px",fontWeight:"bolder"}}>
+          <Link to="https://onlinenotepadeditor.com/page/guest-post/" style={{ border: "3px solid #0000FF", color: "#0000FF", textDecoration: "None", borderRadius: "25px", padding: "8px", fontWeight: "bolder" }}>
             Guest Posting
           </Link>
           {/* <Link to="https://onlinenotepadeditor.com/page/blog/">Blogs</Link> */}
-          <Link to="https://onlinenotepadeditor.com/page/frequently-asked-questions/" style={{border:"3px solid #0000FF",color:"#0000FF",textDecoration:"None",borderRadius:"25px",padding:"8px 20px",fontWeight:"bolder"}}>FAQ</Link>
-        
-          <Link to="https://onlinenotepadeditor.com/page/sitemap_index.xml/" style={{border:"3px solid #0000FF",color:"#0000FF",textDecoration:"None",borderRadius:"25px",padding:"8px",fontWeight:"bolder"}}>
+          <Link to="https://onlinenotepadeditor.com/page/frequently-asked-questions/" style={{ border: "3px solid #0000FF", color: "#0000FF", textDecoration: "None", borderRadius: "25px", padding: "8px 20px", fontWeight: "bolder" }}>FAQ</Link>
+
+          <Link to="https://onlinenotepadeditor.com/page/sitemap_index.xml/" style={{ border: "3px solid #0000FF", color: "#0000FF", textDecoration: "None", borderRadius: "25px", padding: "8px", fontWeight: "bolder" }}>
             Site Map
           </Link>
         </div>
-        <div className="text-black fw-bold mt-5">Find Us On</div>
-        <div
-          className="mt-3 mb-5"
+        <div className="text-black fw-bold mt-5">© 2024 by Online Notepad Editor: All rights reserved</div>
+        {/* <div
+          className="mt-3 "
           style={{
             display: "flex",
             justifyContent: "space-between",
@@ -990,7 +996,8 @@ export default function Card(props) {
           <Link to="/twitter" style={{ color: "black" }}>
             <FontAwesomeIcon icon={faTwitter} size="2x" />
           </Link>
-        </div>
+        </div> */}
+        <hr style={{border:"2px solid black",width:"100%",marginBlockEnd:"100px"}}/>
       </div>
     </div>
   );
