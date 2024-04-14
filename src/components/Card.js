@@ -944,18 +944,11 @@ export default function Card(props) {
             display: "flex",
             flex: "1",
             flexDirection: "row",
-            justifyContent: "space-around",
+            justifyContent:"center",
+            gap:"10px"
           }}
         >
-          {/* <Link to="https://onlinenotepadeditor.com/page/contact-us/">
-            Contact Us
-          </Link> */}
-          {/* <Link to="https://onlinenotepadeditor.com/page/about-us/">
-            About Us
-          </Link> */}
-          {/* <Link to="https://onlinenotepadeditor.com/page/privacy-policy/">
-            Privacy policy
-          </Link> */}
+     
           <Link to="https://onlinenotepadeditor.com/page/dmca/" style={{ border: "3px solid #0000FF", color: "#0000FF", textDecoration: "None", borderRadius: "25px", padding: "8px", fontWeight: "bolder" }}>
             DCMA
           </Link>
