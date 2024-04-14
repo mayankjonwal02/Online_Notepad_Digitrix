@@ -64,19 +64,36 @@ export default function Navbar(props) {
               alignItems: "end",
               display: "flex",
               flex: "1",
+              marginInlineEnd:"200px"
             }}
           >
 
-            <Link className="text-black fw-bold m-3 fs-5" to="https://onlinenotepadeditor.com/page/blog/">Blogs</Link>
-            <Link className="text-black fw-bold m-3 fs-5" to="https://onlinenotepadeditor.com/page/privacy-policy/">
-              Privacy policy
+            <Link className="text-white fw-bold m-3 fs-5" to="https://onlinenotepadeditor.com/page/privacy-policy/"  style={{ textDecoration: 'none' }}>
+              Home
             </Link>
-            <Link className="text-black fw-bold m-3 fs-5" to="https://onlinenotepadeditor.com/page/about-us/">
-              About Us
-            </Link>
-            <Link  className="text-black fw-bold m-3 fs-5" to="https://onlinenotepadeditor.com/page/contact-us/">
+            <Link className="text-white fw-bold m-3 fs-5" to="https://onlinenotepadeditor.com/page/blog/" style={{ textDecoration: 'none' }}>Blogs</Link>
+            
+            <div className="nav-item dropdown ">
+                            <a className="nav-link dropdown-toggle text-white fw-bold m-3 fs-5" href="https://onlinenotepadeditor.com/page/about-us/" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                About Us
+                            </a>
+                            <ul className="dropdown-menu bg-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <li><Link className="dropdown-item text-white" to="https://onlinenotepadeditor.com/page/privacy-policy/">Privacy Policy</Link></li>
+                                <li><Link className="dropdown-item text-white" to="https://onlinenotepadeditor.com/page/contact-us/">Contact Us</Link></li>
+                                <li><Link className="dropdown-item text-white" to="https://onlinenotepadeditor.com/page/help/">Help</Link></li>
+                                <li><Link className="dropdown-item text-white" to="https://onlinenotepadeditor.com/page/trust/">Trust</Link></li>
+                                <li><Link className="dropdown-item text-white" to="https://onlinenotepadeditor.com/page/terms-of-service/">Terms of Service</Link></li>
+                                <li><Link className="dropdown-item text-white" to="https://onlinenotepadeditor.com/page/terms-of-sale/">Terms of Sale</Link></li>
+                            
+                                <li><Link className="dropdown-item text-white" to="https://onlinenotepadeditor.com/page/accessibility/">Accessibility</Link></li>
+                                <li><Link className="dropdown-item text-white" to="https://onlinenotepadeditor.com/page/legal/">Legal</Link></li>
+                                <li><Link className="dropdown-item text-white" to="https://onlinenotepadeditor.com/page/subscription/">Subscription</Link></li>
+                            </ul>
+                        </div>
+              <Link className="text-white fw-bold m-3 fs-5" to="https://onlinenotepadeditor.com/page/contact-us/"  style={{ textDecoration: 'none' }}>Contact Us</Link>
+            {/* <Link  className="text-white fw-bold m-3 fs-5" to="https://onlinenotepadeditor.com/page/contact-us/">
             Contact Us
-          </Link>
+          </Link> */}
             {/* <div
               className="btn bg-white text-primary fw-bold fs-5"
               onClick={onlogout}

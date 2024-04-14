@@ -227,7 +227,7 @@ export default function Card(props) {
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
-              aria-expanded="true"
+              aria-expanded="false"
               aria-controls="collapseOne"
             >
               About
@@ -235,7 +235,7 @@ export default function Card(props) {
           </h2>
           <div
             id="collapseOne"
-            className="accordion-collapse collapse show"
+            className="accordion-collapse collapse"
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
@@ -938,7 +938,7 @@ export default function Card(props) {
             display: "flex",
             flex: "1",
             flexDirection: "row",
-            justifyContent: "space-evenly",
+            justifyContent:"space-around",
           }}
         >
           {/* <Link to="https://onlinenotepadeditor.com/page/contact-us/">
@@ -950,22 +950,23 @@ export default function Card(props) {
           {/* <Link to="https://onlinenotepadeditor.com/page/privacy-policy/">
             Privacy policy
           </Link> */}
-          <Link to="https://onlinenotepadeditor.com/page/terms-of-service/">
-            Terms
+          <Link to="https://onlinenotepadeditor.com/page/dmca/" style={{border:"3px solid #0000FF",color:"#0000FF",textDecoration:"None",borderRadius:"25px",padding:"8px",fontWeight:"bolder"}}>
+            DCMA
           </Link>
-          <Link to="https://onlinenotepadeditor.com/page/dmca/">
-            DMCA policy
+          <Link to="https://onlinenotepadeditor.com/page/work-with-us/" style={{border:"3px solid #0000FF",color:"#0000FF",textDecoration:"None",borderRadius:"25px",padding:"8px",fontWeight:"bolder"}}>
+          Work With us
           </Link>
-          <Link to="https://onlinenotepadeditor.com/page/authors/">
-            Authors
+          <Link to="https://onlinenotepadeditor.com/page/advertise/" style={{border:"3px solid #0000FF",color:"#0000FF",textDecoration:"None",borderRadius:"25px",padding:"8px",fontWeight:"bolder"}}>
+            Advertise
           </Link>
-          <Link to="https://onlinenotepadeditor.com/page/work-with-us/">
-            Work With Us
+          <Link to="https://onlinenotepadeditor.com/page/guest-post/" style={{border:"3px solid #0000FF",color:"#0000FF",textDecoration:"None",borderRadius:"25px",padding:"8px",fontWeight:"bolder"}}>
+            Guest Posting
           </Link>
           {/* <Link to="https://onlinenotepadeditor.com/page/blog/">Blogs</Link> */}
-          <Link to="https://onlinenotepadeditor.com/page/help/">Help</Link>
-          <Link to="https://onlinenotepadeditor.com/page/frequently-asked-questions/">
-            FAQs
+          <Link to="https://onlinenotepadeditor.com/page/frequently-asked-questions/" style={{border:"3px solid #0000FF",color:"#0000FF",textDecoration:"None",borderRadius:"25px",padding:"8px 20px",fontWeight:"bolder"}}>FAQ</Link>
+        
+          <Link to="https://onlinenotepadeditor.com/page/sitemap_index.xml/" style={{border:"3px solid #0000FF",color:"#0000FF",textDecoration:"None",borderRadius:"25px",padding:"8px",fontWeight:"bolder"}}>
+            Site Map
           </Link>
         </div>
         <div className="text-black fw-bold mt-5">Find Us On</div>

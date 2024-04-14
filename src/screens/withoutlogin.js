@@ -10,8 +10,11 @@ export default function WithoutLoginDoc() {
   const docname = ""
   const doctype = "old"
   return (
-    <div className="">
+    <div className="bg-primary ">
+    <div className="container">
+
       <Navbar docname={""} />
+    </div>
 
 <div className="" style={{ backgroundColor: "#e4e4e4"}}>
   
